@@ -2,7 +2,7 @@
 
 Web dashboard over a 300,000-row line-item sales dataset (110,478 orders, 6 outlets, Jun 2025 – Jun 2026).
 
-**Live URL:** `<paste your deployed URL here>`  ·  **Repo:** `<paste GitHub URL here>`
+**Live URL:** https://burger-town-analytics.onrender.com  ·  **Repo:** https://github.com/cr72422/burger-town-analytics-finaly
 
 ## Run locally
 ```bash
