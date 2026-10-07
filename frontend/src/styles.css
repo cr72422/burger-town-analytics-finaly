@@ -1,0 +1,29 @@
+:root{--pine:#1F4D3A;--mustard:#E0A526;--bg:#F1F4F0;--ink:#18231d;--line:#d8ddd6;color-scheme:light}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Figtree Variable",system-ui,sans-serif}
+h1,h3,strong{font-family:"Bricolage Grotesque Variable",sans-serif}
+.app{display:grid;grid-template-columns:290px 1fr;min-height:100vh}
+aside{padding:24px 20px;border-right:1px solid var(--line);background:#fff;position:sticky;top:0;height:100vh;overflow:auto}
+h1{margin:0 0 20px;font-size:28px;color:var(--pine)}h1 small{display:block;font:500 13px "Figtree Variable";color:#6a756e}
+fieldset{border:0;padding:0;margin:0 0 18px}legend{font-weight:600;font-size:13px;margin-bottom:8px}
+.dates{display:grid;gap:6px}input[type=date]{padding:7px;border:1px solid var(--line);border-radius:6px;font:inherit;width:100%}
+.presets,.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+button,.actions a{font:inherit;font-size:13px;padding:5px 10px;border:1px solid var(--line);background:#fff;border-radius:999px;cursor:pointer;color:var(--ink);text-decoration:none}
+button:hover{border-color:var(--pine)}.chip.on{background:var(--pine);color:#fff;border-color:var(--pine)}
+button:focus-visible,input:focus-visible,.actions a:focus-visible{outline:2px solid var(--mustard);outline-offset:2px}
+.actions{display:flex;gap:8px;flex-wrap:wrap}.actions a{background:var(--mustard);border-color:var(--mustard);font-weight:600}
+.foot{font-size:12px;color:#6a756e;margin-top:18px}
+main{padding:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-content:start;transition:opacity .15s}main.busy{opacity:.6}
+.kpis{grid-column:1/-1;display:grid;grid-template-columns:repeat(6,1fr);background:#fff;border:1px solid var(--line);border-radius:10px}
+.kpis div{padding:16px;border-right:1px solid var(--line)}.kpis div:last-child{border:0}
+.kpis span{display:block;font-size:12px;color:#6a756e}.kpis strong{font-size:24px;color:var(--pine)}
+.insights{grid-column:1/-1;margin:0;padding:12px 16px 12px 32px;background:#FBF3DC;border-left:4px solid var(--mustard);border-radius:6px;font-size:14px;line-height:1.6}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px;min-width:0}.card.wide{grid-column:1/-1}
+h3{margin:0 0 2px;font-size:17px}.sub{margin:0 0 10px;font-size:12px;color:#6a756e}
+.donut{display:flex;align-items:center}.donut ul{list-style:none;margin:0;padding:0;font-size:12px;flex:1}
+.donut li{display:flex;align-items:center;gap:6px;padding:3px 0}.donut i{width:9px;height:9px;border-radius:2px}.donut b{margin-left:auto;font:600 12px "Figtree Variable"}
+.heat{display:grid;gap:3px}.cell{height:26px;border-radius:3px}.hl{font-size:11px;color:#6a756e;text-align:center;align-self:center}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line)}th{font-size:12px;color:#6a756e}td:not(:first-child),th:not(:first-child){text-align:right}
+.boot{padding:40px;grid-column:1/-1}
+@media(max-width:1000px){main{grid-template-columns:1fr 1fr}.kpis{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:800px){.app{grid-template-columns:1fr}aside{position:static;height:auto}main{grid-template-columns:1fr;padding:12px}.kpis{grid-template-columns:repeat(2,1fr)}}
+@media(prefers-reduced-motion:reduce){main{transition:none}}
